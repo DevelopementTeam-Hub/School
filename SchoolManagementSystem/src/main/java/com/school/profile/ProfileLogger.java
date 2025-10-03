@@ -15,5 +15,4 @@ public class ProfileLogger implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {	
 		System.out.println("Active Profile is ::"+activeProfile);
 	}
-
 }
