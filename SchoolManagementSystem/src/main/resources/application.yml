@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: test  # Change this to test/prod as needed
+  application:
+    name: student-app
