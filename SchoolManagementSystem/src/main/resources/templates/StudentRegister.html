@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+</head>
+<body>
+	<h3 style="margin-left: 20%;">STUDENT REGISTER PAGE</h3>
+	<form action="save" method="post">
+		<pre>
+			Name				: <input type="text" name="studentName"/><br>
+			Father Name			: <input type="text" name="fatherName"/><br>
+			Mother Name			: <input type="text" name="motherName"/><br>
+			Gender				: <input type="radio" name="gender" value="Male"/>Male<input type="radio" name="gender" value="Female"/>Female<br>
+			Aadhar Number			: <input type="text" name="aadharNumber"/><br>
+			D.O.B				: <input type="date" name="dateOfBirth"/><br>
+			Board				: <input type="text" name="board"/><br>
+			Address				: <textarea name="address"></textarea>
+			Languages			: <select name="languages" multiple="multiple">
+									<option value="Telugu">Telugu</option>
+									<option value="English">English</option>
+									<option value="Hindi">Hindi</option>
+								  </select><br>
+								  <input type="submit" value="Register"/>
+		</pre>
+	</form>
+	<span th:text="${message}"></span>
+</body>
+</html>
+
+
+  

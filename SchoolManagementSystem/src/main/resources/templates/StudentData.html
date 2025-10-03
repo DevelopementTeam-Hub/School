@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+</head>
+<body>
+	<h3>Student Data</h3>
+	<table border="1">
+		<tr>
+			<td>StudentId</td>
+			<td>studentName</td>
+			<td>FatherName</td>
+			<td>MotherName</td>
+			<td>Gender</td>
+			<td>AadharNumber</td>
+			<td>DateOfBirth</td>
+			<td>Board</td>
+			<td>Address</td>
+			<td>Languages</td>
+		</tr>
+		<tr th:each="ob:${list}">
+			<td th:text="${ob.studentId}"></td>
+			<td th:text="${ob.studentName}"></td>
+			<td th:text="${ob.fatherName}"></td>
+			<td th:text="${ob.motherName}"></td>
+			<td th:text="${ob.gender}"></td>
+			<td th:text="${ob.aadharNumber}"></td>
+			<td th:text="${ob.dateOfBirth}"></td>
+			<td th:text="${ob.board}"></td>
+			<td th:text="${ob.address}"></td>
+			<td th:text="${ob.languages }"></td>
+		</tr>
+	</table>
+	
+</body>
+</html>
