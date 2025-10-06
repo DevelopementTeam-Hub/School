@@ -12,7 +12,6 @@ public class SchoolManagementSystemApplication {
 		 SpringApplication.run(SchoolManagementSystemApplication.class, args);
 			
 		 }
-	//
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
