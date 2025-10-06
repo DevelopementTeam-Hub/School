@@ -1,4 +1,4 @@
-package com.school.entity;
+/*package com.school.entity;
 
 import java.util.List;
 import java.util.Random;
@@ -6,6 +6,7 @@ import java.util.Random;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -43,7 +44,8 @@ public class Parent {
 		this.otp = String.valueOf(number);
 	}
 
-	@OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Student> children;
 
 }
+*/

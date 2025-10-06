@@ -1,5 +1,5 @@
 spring:
   profiles:
-    active: test  # Change this to test/prod as needed
+    active: dev
   application:
-    name: student-app
+    name: SchoolManagementSystem

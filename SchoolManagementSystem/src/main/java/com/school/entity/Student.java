@@ -10,8 +10,6 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
@@ -26,7 +24,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "stud_seq")
-    @SequenceGenerator(name="stud_seq", initialValue = 2025057001, allocationSize = 1)
+    @SequenceGenerator(name="stud_seq", initialValue = 202500001, allocationSize = 1)
     @Column(name="stud_id_col")
     private Long id;
 
@@ -43,7 +41,7 @@ public class Student {
     private String gender;
 
     @Column(nullable=false, name="stud_aadharNo_col", length=50, unique = true)
-    private String aadharNumber;
+    private Long aadharNumber;
 
     @Column(nullable=false, name="stud_dob_col")
     private LocalDate dateOfBirth;
@@ -51,17 +49,14 @@ public class Student {
     @Column(nullable=false, name="stud_board_col", length=50)
     private String board;
     
-    @OneToMany(mappedBy = "location", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Attendance> attendanceRecords;
-
-    @ManyToOne
-    private Location location;
-
-    @ManyToOne
-    private Parent parent;
-    
-    @ManyToMany
-    private List<Teacher> teachers;
-    
+	/*@ManyToOne
+	private Location location;
+	
+	@ManyToOne
+	private Parent parent;
+	
+	@ManyToMany
+	private List<Teacher> teachers;*/
+   
 
 }

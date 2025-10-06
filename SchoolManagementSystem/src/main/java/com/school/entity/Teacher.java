@@ -1,11 +1,13 @@
-package com.school.entity;
+/*package com.school.entity;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,12 +39,11 @@ public class Teacher {
 	@Column(name="teach_phone_col")
 	private Long phone;
 
-	@ElementCollection
-	@CollectionTable(name = "teacher_locations", joinColumns = @JoinColumn(name = "teacher_id"))
-	@Column(name = "teach_loc_col")
-	private List<String> location;
+	@Column(name="teach_loc_col")
+	private String location;
 
-	@ManyToMany(mappedBy = "teachers")
+	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	private List<Student> students;
 
 }
+*/
