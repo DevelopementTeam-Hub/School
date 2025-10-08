@@ -16,8 +16,11 @@ import com.school.service.IAttendanceService;
 public class AttendanceServiceImpl implements IAttendanceService {
 
 	@Autowired IAttendanceRepository attendanceRepository;
+	
 	@Autowired IStudentRepository studentRepository;
+	
 	@Autowired ModelMapper modelMapper;
+	
 	@Override
 	public AttendanceDto markAttendanceByStudentId(Long sid,AttendanceDto attandanceDto) {
 		Student student = studentRepository.findById(sid).orElseThrow(()->new StudentNotFound(String.format("Studnet Id %id Not Found", sid)));
